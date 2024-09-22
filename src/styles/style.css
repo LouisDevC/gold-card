@@ -18,6 +18,9 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+body, html{
+    width: 100%;
+}
 ::-webkit-scrollbar{
     width: 6px;
     background-color: #000000;
@@ -36,6 +39,7 @@
     width: 8rem;
     text-align: center;
     text-transform: capitalize;
+    margin: 10px 0;
 
     opacity: 0.9;
     transition: ease-in-out .5s;
@@ -46,9 +50,11 @@
 /* header */
 header{
     display: flex;
+    flex-wrap: wrap;
     position: fixed;
     top: 0;
     justify-content: space-between;
+    align-items: center;
     background-image: linear-gradient(black,  transparent 90%);
     color: white;
     padding: 0 100px;
@@ -64,8 +70,11 @@ header img{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 20rem;
+    max-width: 20rem;
     z-index: 2;
+}
+.screen-choice h1{
+    text-align: center;
 }
 select, option{
     width: 8rem;
@@ -81,8 +90,8 @@ select:hover{
 }
 /* main */
 .call-container{
-    width: 100%;
-    height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
     overflow: hidden;
     z-index: 0;
 }
@@ -97,11 +106,12 @@ select:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     z-index: 2;
     color: white;
     top: 35vh;
     width: 100%;
-    padding: 0 100px;
+    padding: 20px 100px;
 }
 .call img{
     width: 15rem;
@@ -112,7 +122,6 @@ select:hover{
     width: 50%;
 }
 .call-txt h2{
-    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 .call-txt p{
@@ -127,8 +136,8 @@ select:hover{
     text-align: center;
 }
 .channel{
-    width: 100%;
-    background-color: white;
+    max-width: 100vw;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +149,8 @@ select:hover{
     margin: 20px 0;
 }
 .channel img{
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
 }
 .channel ul{
     background-image: url('../images/Group\ 1\ \(2\).png');
@@ -148,7 +158,7 @@ select:hover{
     background-attachment: fixed;
     background-position: top;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     color: #F3A522;
     font-size: 2rem;
 
@@ -168,6 +178,9 @@ select:hover{
     border-radius: 3rem;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.616), 3px 3px 8px rgba(0, 0, 0, 0.445);
     padding: 100px;
+
+    max-width: 100%;
+    max-height: 100%;
 }
 .box-container li{
     display: flex;
@@ -180,8 +193,10 @@ select:hover{
 .plans-container{
     background-color: black;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
     height: 100vh;
 }
 .plan{
@@ -255,12 +270,14 @@ select:hover{
 }
 footer{
     background-color: #000000;
-    height: 50vh;
+    min-height: 50vh;
     border-top: 3px groove #F3A522;
     color: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    padding: 10px;
 }
 footer h4{
     font-size: 3rem;
@@ -274,4 +291,56 @@ footer aside{
 }
 footer aside p{
     margin: 50px 0;
+}
+@media all and (max-width: 936px) {
+    header{
+        position: static;
+        background-color: #000000;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .screen-choice{
+        width: 100%;
+    }
+    .call{
+        position: static;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+    }
+    .call-txt{
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+    .call-txt p{
+        width: 100%;
+    }
+    .call img{
+        min-width: 15%;
+        margin: 20px auto;
+    }
+    .call-container video{
+        display: none;
+    }
+    .call-container{
+        background-color: #000000;
+    }
+    .plans-container{
+        height: auto;
+    }
+}
+@media all and (max-width: 668px){
+    .box-container{
+        width: 90vw;
+        font-size: 5vw;
+        padding: 100px 10px;
+    }
+}
+@media all and (max-width: 728px){
+    footer aside{
+        width: 100%;
+        padding: 15px;
+    }
 }

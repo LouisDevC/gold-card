@@ -19,8 +19,6 @@ const observer = new IntersectionObserver((entries, observer) =>{
             })
         }
     })
-},{
-    threshold: 0.7
-})
+},{ })
 
 observer.observe(containerToObserver)
