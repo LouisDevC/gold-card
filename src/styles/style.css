@@ -58,7 +58,7 @@ header{
     background-image: linear-gradient(black,  transparent 90%);
     color: white;
     padding: 0 100px;
-    width: 100vw;
+    min-width: 100%;
     z-index: 3;
 }
 header img{
@@ -283,8 +283,8 @@ footer h4{
     font-size: 3rem;
 }
 footer img{
-    width: 10vw;
-    height: 10vw;
+    width: 120px;
+    height: 120px;
 }
 footer aside{
     width: 40%;
@@ -292,6 +292,7 @@ footer aside{
 footer aside p{
     margin: 50px 0;
 }
+/* media queries */
 @media all and (max-width: 936px) {
     header{
         position: static;
@@ -341,6 +342,12 @@ footer aside p{
 @media all and (max-width: 728px){
     footer aside{
         width: 100%;
-        padding: 15px;
+        padding: 10px 15px;
+    }
+    footer h4{
+        font-size: 2rem;
+    }
+    footer img{
+        margin-top: 20px;
     }
 }
