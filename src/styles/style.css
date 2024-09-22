@@ -40,7 +40,7 @@ body, html{
     text-align: center;
     text-transform: capitalize;
     margin: 10px 0;
-
+    cursor: pointer;
     opacity: 0.9;
     transition: ease-in-out .5s;
 }
@@ -161,7 +161,6 @@ select:hover{
     height: 100vh;
     color: #F3A522;
     font-size: 2rem;
-
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -178,7 +177,6 @@ select:hover{
     border-radius: 3rem;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.616), 3px 3px 8px rgba(0, 0, 0, 0.445);
     padding: 100px;
-
     max-width: 100%;
     max-height: 100%;
 }
@@ -210,7 +208,6 @@ select:hover{
     border-radius: 2rem;
     z-index: 4;
     border: 5px groove orange;
-
     overflow: hidden;
     display: flex;
     transform: translate(-1250px);
@@ -292,6 +289,22 @@ footer aside{
 footer aside p{
     margin: 50px 0;
 }
+footer .bi-whatsapp{
+    margin-bottom: 50px;
+}
+.whatsapp{
+    position: fixed;
+    display: none;
+    top: 92vh;
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;  
+    text-align: center;
+    width: 100vw;
+    text-align: center;
+    background-color: forestgreen;
+    z-index: 5;
+}
 /* media queries */
 @media all and (max-width: 936px) {
     header{
@@ -352,5 +365,13 @@ footer aside p{
     }
     .channel ul{
         background-attachment: local;
+    }
+}
+@media all and (max-width: 768px){
+    .whatsapp{
+        display: block;
+    }
+    footer .bi{
+        display: none;
     }
 }
