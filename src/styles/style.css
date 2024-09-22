@@ -350,4 +350,7 @@ footer aside p{
     footer img{
         margin-top: 20px;
     }
+    .channel ul{
+        background-attachment: local;
+    }
 }
