@@ -296,14 +296,17 @@ footer .bi-whatsapp{
     position: fixed;
     display: none;
     bottom: 0vh;
+    left: 30%;
     font-size: 2rem;
     color: white;
     font-weight: bolder;  
     text-align: center;
-    width: 100vw;
+    width: 40vw;
     text-align: center;
+    padding: 5px;
     background-color: forestgreen;
     z-index: 5;
+    border-radius: 2rem 2rem 0 0;
 }
 /* media queries */
 @media all and (max-width: 936px) {
