@@ -295,7 +295,7 @@ footer .bi-whatsapp{
 .whatsapp{
     position: fixed;
     display: none;
-    top: 100vh;
+    bottom: 0vh;
     font-size: 2rem;
     color: white;
     font-weight: bolder;  
@@ -371,7 +371,7 @@ footer .bi-whatsapp{
     .whatsapp{
         display: block;
     }
-    footer .bi{
+    footer .bi, .f{
         display: none;
     }
 }
